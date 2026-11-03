@@ -34,7 +34,7 @@
     0deg, 
     transparent, 
     transparent 30%, 
-    rgba(0,255,255,0.3)
+    rgba(255, 0, 0, 0.404)
   );
   transform: rotate(-45deg);
   transition: all 0.5s ease;
@@ -43,7 +43,7 @@
 
 .modal:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  box-shadow: 0 0 20px rgba(162, 0, 0, 0.5);
 }
 
 .modal:hover::before {
@@ -97,10 +97,11 @@
 }
 
 .modal-body {
-  padding-bottom: 50px;
-  flex: space-between;
+  display:flex;
+  flex-direction: column;
+  
   color:#ffffff;
-  row-gap: 50px;
+  row-gap: 15px;
 }
 
 
@@ -152,12 +153,15 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment:scroll;
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
   width: 1440px;
   height: 1024px;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 .hero {
@@ -182,6 +186,8 @@ p {
 body{
   background:black;
   font-family: 'Varela', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .glitch{
@@ -256,9 +262,10 @@ body{
 .glitch:after {
   content: attr(data-text);
   position: absolute;
-  left: 350px;
+  left:675px;
   text-shadow: -1px 0 red;
   
+
   color: white;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 4s infinite linear alternate-reverse;
